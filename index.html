@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300;400;500;600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <script src="js/app.js" defer></script>
-  <title>Exchange Rate App</title>
+  <title>Money Conversion Rate App</title>
 </head>
 <body>
     <header class="main-header">
@@ -18,30 +18,27 @@
         <div class="brand__logo">
           <img src="./img/ex-change_logo-2.png" alt="Brand logo">
         </div>
-        <span class="brand__text">EX-change</span>
+        <span class="brand__text">MX-change</span>
       </div>
       <div class="api-update">
         <span id="api-update__text" class="api-update__text">Last updated on:</span>
         <span id="api-update__data" class="api-update__data"> 9 oct 2022 00:00</span>
       </div>
       <div class="clock">
-        <i class="fa-regular fa-clock fa-lg"></i>
-        <span id="time" class="time">09 : 42</span>
+        <i class="fa-regular fa-clock fa-lg"></i><span id="time"></span>
       </div>
     </header>
 
     <main class="container">
-      <h1>Money Exchange Calculator</h1>
+      <h1>Money Conversion Rate Calculator</h1>
 
-      <span id="conversion-rate" class="conversion-rate">1 USD = 1.032 EUR</span>
+      <span id="conversion-rate-description" class="conversion-rate"></span>
 
       <div class="conversions">
 
         <div class="conversion-box">
           <select id="conversion-A__menu" class="conversion-A__menu">
             <option value="USD" selected>USD</option>
-            <option value="EUR">EUR</option>
-            <option value="AUD">AUD</option>
           </select>
           <input type="number" id="conversion-A__input" class="conversion-A__input" placeholder="1">
         </div>
@@ -50,18 +47,16 @@
 
         <div class="conversion-box">
           <select id="conversion-B__menu" class="conversion-B__menu">
-            <option value="USD">USD</option>
             <option value="EUR" selected>EUR</option>
-            <option value="AUD">AUD</option>
           </select>
-          <input type="number" id="conversion-B__input" class="conversion-B__input" placeholder="0">
+          <input type="number" id="conversion-B__input" class="conversion-B__input" placeholder="0" readonly>
         </div>
 
       </div>
     </main>
 
     <footer>
-      <span>&copy; EX-change 2022 - <a href="#">Term of use</a></span>
+      <span>&copy; MX-change 2022 - <a href="#">Term of use</a></span>
       <span>Website made by <a href="#">xxx</a></span>
     </footer>
 </body>
